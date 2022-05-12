@@ -1,3 +1,9 @@
 [submodule "sources/libarchive"]
 	path = sources/libarchive
 	url = https://github.com/libarchive/libarchive.git
+[submodule "sources/libsndfile"]
+	path = sources/libsndfile
+	url = https://github.com/libsndfile/libsndfile.git
+[submodule "sources/libsamplerate"]
+	path = sources/libsamplerate
+	url = https://github.com/libsndfile/libsamplerate

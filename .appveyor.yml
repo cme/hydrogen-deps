@@ -1,0 +1,36 @@
+
+environment:
+  matrix:
+
+    - job_name: 'OS X'
+      job_group: 'Mac OS X'
+      appveyor_build_worker_image: macos
+
+
+build:
+  verbosity: detailed
+
+matrix:
+  exclude:
+    - job_name: Windows32
+      branches: "master"
+
+for:
+
+  - 
+    matrix:
+      only:
+        - job_group: 'Mac OS X'
+
+    before_build: |-
+
+      CPUS=$(sysctl -n hw.ncpu)
+      git submodule init && git submodule update
+
+    build_script: |-
+
+
+      # Do the build
+      cmake -B build .
+      ( cd build && make -j $CPUS )
+

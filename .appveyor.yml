@@ -33,5 +33,10 @@ for:
       # Do the build
       cmake -B build .
       ( cd build && make -j $CPUS install )
-      ls -lR hydrogen-deps
+
+      tar zcvf hydrogen-deps.tar.gz hydrogen-deps
       find build -name '*.dylib' -exec otool -L '{}' ';'
+
+      appveyor PushArtifact hydrogen-deps/build/jack2-prefix/src/jack2/build/config.log
+      appveyor PushArtifact hydrogen-deps.tar.gz
+      

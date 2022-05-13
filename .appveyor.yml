@@ -34,3 +34,4 @@ for:
       cmake -B build .
       ( cd build && make -j $CPUS install )
       ls -lR hydrogen-deps
+      find build -name '*.dylib' -exec otool -L '{}' ';'

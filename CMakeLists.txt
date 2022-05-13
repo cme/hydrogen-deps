@@ -33,6 +33,9 @@ message("XXX libsamplerate")
 set(BUILD_TESTING OFF)
 add_subdirectory(sources/libsamplerate)
 
+ExternalProject_Add(aften
+                    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sources/aften-0.0.8)
+
 ExternalProject_Add(berkeleydb
                     # PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/sources/db-18.1.40
                     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sources/db-18.1.40

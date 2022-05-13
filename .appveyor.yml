@@ -34,4 +34,4 @@ for:
       cmake -B build .
       ( cd build && make -j $CPUS )
       echo "LOG:"
-      cat /Users/appveyor/projects/hydrogen-deps/build/jack2-prefix/src/jack2/build/config.log)
+      cat /Users/appveyor/projects/hydrogen-deps/build/jack2-prefix/src/jack2/build/config.log

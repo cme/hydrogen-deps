@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.22)
-project(hydrogen-deps)
-include(ExternalProject)
 
 # macOS platform environment variables
-# set(ENV{MACOSX_DEPLOYMENT_TARGET} 10.10)
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.10")
 # set(CMAKE_OSX_ARCHITECTURES "x86_64;i386;arm64")
+
+project(hydrogen-deps)
+include(ExternalProject)
 
 
 
